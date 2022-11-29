@@ -9,7 +9,6 @@ class PlanetTest {
   private List<Planet> planets = SolarSystem.getPlanets();
   private PlanetUtils planetUtils = new PlanetUtils();
 
-
   @Test
   void testTwoPlanetsStartWithM() {
     List<Planet> actual = planetUtils.getPlanetsBeginningWithM(planets);
