@@ -21,6 +21,7 @@ public class Main {
 
     Stream<String> shoppingListStream = shoppingList.stream();
     shoppingListStream.sorted()
+            .map(item->item.toUpperCase())
             .forEach(item -> System.out.println(item));
 
     Stream<String> lettersStream = Stream.of("a","b","c");
