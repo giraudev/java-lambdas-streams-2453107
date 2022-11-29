@@ -26,7 +26,7 @@ class EmployeeTest {
     employee2.setLastName("Westbay");
     employee1.setManager(employee2);
 
-    String actual = employeeUtils.getManagersLastName(employee1);
+    String actual = employeeUtils.getManagersLastName(employee2);
 
     assertThat(actual).isEqualTo("Westbay");
   }
@@ -59,7 +59,7 @@ class EmployeeTest {
 
     Boolean actual = employeeUtils.hasMoreThanThreeYearsOfServiceAndLessThanTwoDirectReports(employee);
 
-    assertThat(actual).isTrue();
+    assertThat(actual).isFalse();
   }
 
 }
