@@ -22,7 +22,11 @@ public class Main {
     Stream<String> shoppingListStream = shoppingList.stream();
     shoppingListStream.sorted()
             .map(item->item.toUpperCase())
+            .filter(item->item.startsWith("P"))
             .forEach(item -> System.out.println(item));
+
+    //Exception in thread "main" java.lang.IllegalStateException: stream has already been operated upon or closed
+    //shoppingListStream.forEach(x-> System.out.println(x));
 
     Stream<String> lettersStream = Stream.of("a","b","c");
 
